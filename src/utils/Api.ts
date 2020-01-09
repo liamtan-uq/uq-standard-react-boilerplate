@@ -1,26 +1,20 @@
+import axios, { AxiosResponse } from 'axios';
+import { API_URL } from '../env';
+import { EHTTPMethod, IUser } from '../types';
 class Api {
 
-    doRequest() {
-        return new Promise((resolve, reject) => {
-            resolve([
-                {
-                    id: 0,
-                    name: "Liam Tan"
-                },
-                {
-                    id: 1,
-                    name: "Bob Saget"
-                },
-                {
-                    id: 2,
-                    name: "Gordon Ramsay"
-                },
-            ]);
-        })
+    private baseUrl = API_URL;
+
+    private doRequest(method: EHTTPMethod, endpoint: string): Promise<AxiosResponse<any>> {
+        console.log(this.baseUrl)
+        return axios.request({
+            method,
+            url: `${this.baseUrl}${endpoint}`
+        });
     }
 
-    getUsers() {
-        return this.doRequest();
+    public getUsers(): Promise<AxiosResponse<IUser>> {
+        return this.doRequest(EHTTPMethod.GET, '/users');
     }
 
 }

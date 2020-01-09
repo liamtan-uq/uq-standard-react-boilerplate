@@ -16,7 +16,7 @@ export const fetchUsers = () => async (dispatch: Dispatch) => {
         const response = await Api.getUsers(); 
         return dispatch({
             type: "FETCH_USERS_SUCCESS",
-            users: response,
+            users: response.data,
         });
     } catch (error) {
         console.error(error);
