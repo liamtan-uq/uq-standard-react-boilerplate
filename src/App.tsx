@@ -8,6 +8,7 @@ import store from './reducers';
 
 import UsersPage from './pages/UsersPage';
 
+import AppBar from './components/AppBarSticky';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
     <StoreProvider store={store}>
         <div className="App">
           <Router>
+            <AppBar />
             <h1>UQ Standard React Redux Boilerplate</h1>
             
               <Switch>
