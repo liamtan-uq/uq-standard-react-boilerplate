@@ -2,7 +2,7 @@
 
 #### Maintained by Liam Tan
 
-[![N|Solid](http://i.imgur.com/LamMY0a.png)](https://nodesource.com/products/nsolid)
+[![N|Solid](http://i.imgur.com/mBTqYXfg.png)](https://nodesource.com/products/nsolid)
 
 ## Impetus
 
