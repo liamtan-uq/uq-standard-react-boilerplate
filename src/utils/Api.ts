@@ -9,7 +9,6 @@ class Api {
     method: EHTTPMethod,
     endpoint: string
   ): Promise<AxiosResponse<any>> {
-    console.log(this.baseUrl);
     return axios.request({
       method,
       url: `${this.baseUrl}${endpoint}`
