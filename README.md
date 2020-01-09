@@ -30,3 +30,11 @@ in redux.
 yarn
 yarn start
 ```
+
+## Testing
+
+This project uses Jest to write automated unit tests. Run the following command to execute them:
+
+```
+yarn test
+```
