@@ -15,7 +15,7 @@ class Api {
     });
   }
 
-  public getUsers(): Promise<AxiosResponse<IUser>> {
+  public getUsers(): Promise<AxiosResponse<IUser[]>> {
     return this.doRequest(EHTTPMethod.GET, "/users");
   }
 }
